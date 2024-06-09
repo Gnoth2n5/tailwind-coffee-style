@@ -7,12 +7,17 @@ module.exports = {
         Karla: ['Karla', 'sans-serif']
       },
       colors: {
-        'light-coffee': '#C89F94',
+        'coffee': {
+          50: '#E8D6D0',
+          200: '#C89F94',
+          400: '#A25F4B',
+          600: '#744838',
+        },
       },
       keyframes: {
         slideDown: {
-          '0%': {transform: 'translateY(-100%)'},
-          '100%': {transform: 'translateY(0)'}
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(0)' }
         },
         slideUp: {
           '0%': { transform: 'translateY(0)' },
@@ -24,7 +29,7 @@ module.exports = {
         slideUp: 'slideUp 0.4s ease-in-out'
       },
       backgroundImage: {
-        'slider-bg': "url('./image/slider.jpg')" 
+        'slider-bg': "url('./image/slider.jpg')"
       }
     },
   },
