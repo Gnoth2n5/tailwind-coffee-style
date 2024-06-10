@@ -34,7 +34,7 @@
   @apply w-8 h-px bg-gray-200;
 }
 .label {
-  @apply uppercase mx-4 tracking-widest text-gray-500 font-medium text-xs;
+  @apply uppercase mx-4 tracking-widest text-gray-500 font-medium text-xs text-center;
 }
 
 .ct-button {
