@@ -26,3 +26,16 @@ document.addEventListener('click', (e) => {
         }
     }
 });
+
+
+window.onload = () => {
+    var canvas = document.getElementById('logoCanvas');
+
+    var ctx = canvas.getContext('2d');
+    
+
+    ctx.font = "bold 55px Pacifico";
+    ctx.fillStyle = "#A25F4B";
+    ctx.textAlign = "center";
+    ctx.fillText('CoffeeStyle', 150 , 65);
+}
