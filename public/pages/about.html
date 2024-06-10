@@ -1,0 +1,302 @@
+<!-- 
+ 
+ - Công nghệ sử dụng:
+  + Tailwind
+  + Áp dụng flex, grid
+  + Parallax 
+  + Video nhúng trực tiếp
+  + Sử dụng canvas để vẽ logo
+  + Responsive chi tiết
+
+-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee</title>
+    <link href="/public/output.css" type="text/css" rel="stylesheet">
+    <link rel="icon" href="/public/image/favicon/icon.jpg" sizes="16x16">
+    <script src="/public/main.js" type="text/javascript" async></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="root">
+        <div class="content-wrapper ct-no-parallax font-Karla text-base mx-auto px-8"> <!--- conten-wrapper #1 --->
+            <header class="p-6 mx-auto w-full">
+                <nav class="flex flex-row justify-between items-center relative">
+
+                    <div class="logo basis-2/6">
+                        <canvas id="logoCanvas" style="width: 150px; height: 70px;" class="mt-9 ml-5"></canvas>
+                    </div>
+
+                    <ul id="ct-top-menu"
+                        class=" basis-3/6 hidden lg:flex lg:items-center lg:justify-center lg:gap-8 uppercase text-sm text-gray-500 font-medium">
+                        <li class="ct-top-menu-item">
+                            <a class="" href="index.html">Home</a>
+                        </li>
+                        <li class="ct-top-menu-item">
+                            <a class="" href="products.html">Products</a>
+                        </li>
+                        <li class="ct-top-menu-item"><a class="" href="about.html">About</a>
+                        </li>
+                        <li class="ct-top-menu-item">
+                            <a class="" href="contact.html">Contact</a>
+                        </li>
+                        <li class="ct-top-menu-item">
+                            <a class="" href="contact.html">Our Story</a>
+                        </li>
+
+                    </ul>
+
+                    <ul
+                        class="basis-3/6 lg:basis-1/6 flex justify-end lg:justify-start items-center ml-16 uppercase text-sm text-gray-500 font-medium">
+                        <li class="ct-top-menu-item">
+                            <a href="" class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="ct-icon">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                                </svg>
+
+                                <span class="mx-2">Cart</span>
+                                <span class="ct-badge-circle bg-orange-400 text-white">10</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="basis-1/6 lg:hidden flex items-center cursor-pointer sm:px-8 px-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="ct-icon" id="ct-toggle-top-menu-icon">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+
+                    </div>
+
+                </nav>
+            </header>
+
+            <div class="wrapper w-[95%] xl:w-[65%] mx-auto mb-24">
+
+                <div class="content">
+
+                    <div class="flex flex-col justify-center items-center gap-8 lg:gap-4 w-[95%] lg:w-[65%] mx-auto mb-16">
+                        <div class="text-coffee-600 text-3xl font-medium">About</div>
+                        <div class="text-xl text-center">The Coffee Style will be a place where people come
+                            together, promoting the value of human connection and intimate sharing over fragrant cups of
+                            coffee and tea, inspiring a modern lifestyle.</div>
+                    </div>
+
+                    <div>
+                        <img class="h-[500px] bg-cover bg-no-repeat bg-center" src="../image/about-cover.jpg" alt="">
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="bg-[url('./image/bg-parallax.jpg')] bg-cover bg-no-repeat bg-center h-[380px] md:h-[500px] mb-24 bg-fixed
+            w-[100vw] relative left-[calc(-50vw+50%)]">
+
+        </div>
+        <!-- end parallax -->
+
+        <div class="content-wrapper ct-no-parallax font-Karla text-base mx-auto px-8"> <!--- conten-wrapper #2 --->
+
+
+            <div class="ct-subheadline">
+                <div class="decor-line"></div>
+                <div class="label">BEHIND THE MUGS, LIFESTYLE STORIES</div>
+                <div class="decor-line"></div>
+            </div>
+
+            <div class="lifestyle-story w-[95%] xl:w-[65%] mx-auto mb-24">
+                <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 md:gap-4 gap-8">
+
+                    <div class="ct-lifestory-card">
+
+                        <div class="h-[300px] bg-[url('./image/story1.jpg')] bg-cover bg-no-repeat bg-center">
+                            <a href="#">
+                                <div class="w-full h-full hover:bg-gray-900 hover:bg-opacity-10
+                                hover:transition-all hover:ease-in-out hover:duration-500 relative group">
+                                    <div class="ct-button absolute bg-white text-gray-900 w-11/12 bottom-4 left-1/2 -translate-x-1/2 
+                                    text-center hidden group-hover:block group-hover:animate-fadeIn">Read the Full
+                                        Story
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="text-left my-6 ">
+                            <a href="#" class="">
+                                <div class="text-xl mb-3 hover:text-coffee-400">Health Check: why do I get a
+                                    headache when I haven’t had my coffee?</div>
+                            </a>
+                            <div class="text-gray-500 leading-7 mb-3">
+                                It is a paradisematic country, in which roasted parts of sentences fly into your
+                                mouth.
+                            </div>
+                            <div class="text-gray-500 leading-7 uppercase text-[13px] font-semibold tracking-widest">
+                                October 9, 2018
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="ct-lifestory-card">
+
+                        <div class="h-[300px] bg-[url('./image/story2.jpg')] bg-cover bg-no-repeat bg-center">
+                            <a href="#">
+                                <div class="w-full h-full hover:bg-gray-900 hover:bg-opacity-10
+                                hover:transition-all hover:ease-in-out hover:duration-500 relative group">
+                                    <div class="ct-button absolute bg-white text-gray-900 w-11/12 bottom-4 left-1/2 -translate-x-1/2 
+                                    text-center hidden group-hover:block group-hover:animate-fadeIn">Read the Full
+                                        Story
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="text-left my-6 ">
+                            <a href="#" class="">
+                                <div class="text-xl mb-3 hover:text-coffee-400">How long does a cup of coffee keep
+                                    you awake?</div>
+                            </a>
+                            <div class="text-gray-500 leading-7 mb-3">
+                                It is a paradisematic country, in which roasted parts. Vel qui et ad voluptatem.
+                            </div>
+                            <div class="text-gray-500 leading-7 uppercase text-[13px] font-semibold tracking-widest">
+                                October 9, 2018
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="ct-lifestory-card">
+
+                        <div class="h-[300px] bg-[url('./image/story3.jpg')] bg-cover bg-no-repeat bg-center">
+                            <a href="#">
+                                <div class="w-full h-full hover:bg-gray-900 hover:bg-opacity-10
+                                hover:transition-all hover:ease-in-out hover:duration-500 relative group">
+                                    <div class="ct-button absolute bg-white text-gray-900 w-11/12 bottom-4 left-1/2 -translate-x-1/2 
+                                    text-center hidden group-hover:block group-hover:animate-fadeIn">Read the Full
+                                        Story
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="text-left my-6 ">
+                            <a href="#" class="">
+                                <div class="text-xl mb-3 hover:text-coffee-400">Recent research suggests that heavy
+                                    coffee drinkers may reap health benefits.</div>
+                            </a>
+                            <div class="text-gray-500 leading-7 mb-3">
+                                It is a paradisematic country, in which roasted parts of sentences fly into your
+                                mouth.
+                            </div>
+                            <div class="text-gray-500 leading-7 uppercase text-[13px] font-semibold tracking-widest">
+                                October 9, 2018
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div> <!--end lifestyle-story-->
+
+
+            <div
+                class="subscribe-us w-full max-w-screen-2xl h-[350px] bg-[#1d1f2e] flex flex-col justify-center items-center mb-24">
+
+                <div class="flex justify-center items-center px-6 xs:px-0 mb-5">
+                    <div class="w-8 h-px bg-gray-700"></div>
+                    <div class="uppercase mx-4 tracking-widest text-gray-400 font-bold text-xs text-center">SIGN UP
+                        AND GET FREE COFFEE BAGS</div>
+                    <div class="w-8 h-px bg-gray-700"></div>
+                </div>
+
+                <div class="text-4xl mb-5 text-white">Coffee Updates</div>
+
+                <div class="ct-form">
+                    <div class="flex flex-col md:flex-row justify-center items-center gap-3">
+                        <div class="ct-form-item text-center">
+                            <input type="email" placeholder="Email is here" class="px-6 py-4 w-[350px] max-w-[80%] xs:max-w-full bg-inherit border-[1px] border-gray-700 outline-none
+                                text-white hover:border-gray-300 duration-500 focus:border-gray-300 placeholder:uppercase placeholder:text-xs
+                                placeholder:tracking-widest placeholder:font">
+                        </div>
+                        <div class="ct-form-item">
+                            <button type="submit"
+                                class="ct-button bg-white text-gray-900 w-max max-h-[54px]">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div> <!--end subscribe-us-->
+
+
+
+            <footer class="w-[95%] xl:w-[65%] mx-auto pb-24 text-gray-500 text-sm">
+                <div class="flex flex-col md:flex-row gap-12 md:gap-8 text-center md:text-left">
+
+                    <div class="basis-2/6">
+                        <div class="font-bold text-xl mb-4 text-gray-800">CoffeeStyle</div>
+                        <div class="mb-8 md:mb-20">Delivering the best coffee life since 1996. From coffee geeks to the
+                            real ones.
+                        </div>
+                        <div class="text-gray-400 hover:text-coffee-400">Thongpm Inc. © 2024</div>
+                    </div>
+
+                    <div class="basis-1/6">
+                        <div class="uppercase font-semibold tracking-wider text-gray-600 mb-4">Menu</div>
+                        <div class="">
+                            <div class="flex flex-col gap-3">
+                                <a href="#" class="text-gray-500 hover:text-coffee-400">Home</a>
+                                <a href="#" class="text-gray-500 hover:text-coffee-400">Products</a>
+                                <a href="#" class="text-gray-500 hover:text-coffee-400">About</a>
+                                <a href="#" class="text-gray-500 hover:text-coffee-400">Blog</a>
+                                <a href="#" class="text-gray-500 hover:text-coffee-400">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="basis-1/6">
+                        <div class="uppercase font-semibold tracking-wider text-gray-600 mb-4">Follow Us</div>
+                        <div class="">
+                            <div class="flex flex-col gap-3">
+                                <a href="#" class="text-gray-500 hover:text-coffee-400">Facebook</a>
+                                <a href="#" class="text-gray-500 hover:text-coffee-400">Instagram</a>
+                                <a href="#" class="text-gray-500 hover:text-coffee-400">Pinterest</a>
+                                <a href="#" class="text-gray-500 hover:text-coffee-400">Twitter</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="basis-2/6">
+                        <div class="uppercase font-semibold tracking-wider text-gray-600 mb-8 md:mb-4">Contact Us</div>
+                        <div class="mb-4">We’re Always Happy to Help</div>
+                        <div class="mb-16 text-gray-800 text-[22px] font-medium tracking-wide"><a href="#"
+                                class="hover:text-coffee-400">thongpmpn00089@gmail.com</a></div>
+                        <div class=""><a href="#" class="text-gray-400 hover:text-coffee-400">Powered by Thong</a></div>
+                    </div>
+
+                </div>
+            </footer>
+        </div> <!-- end content wrapper -->
+    </div> <!--end root-->
+
+</body>
+
+</html>
