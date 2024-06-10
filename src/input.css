@@ -28,7 +28,7 @@
 }
 
 .ct-subheadline {
-  @apply flex justify-center items-center mb-24 text-center;
+  @apply flex justify-center items-center my-20 text-center;
 }
 .decor-line {
   @apply w-8 h-px bg-gray-200;
@@ -40,4 +40,49 @@
 .ct-button {
   @apply uppercase tracking-wider 
   py-4 px-6 text-sm font-medium cursor-pointer hover:bg-opacity-90;
+}
+
+#root {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+
+.ct-parallax,
+.ct-no-parallax {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+}
+.ct-parallax{
+  height: 50vh;
+}
+.ct-no-parallax {
+  height: auto;
+  z-index: 999;
+  background: white;
+}
+
+.parallax-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@media screen(xl) {
+  .ct-parallax {
+    height: 70vh;
+    transform-style: preserve-3d;
+  }
+  .parallax-img {
+    transform: translateZ(-1px) scale(1.5);
+  }
 }
